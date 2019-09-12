@@ -1,0 +1,67 @@
+.footer {
+	background-color: $darkblue;
+	color: $white;
+	&__wrapper {
+		padding: 9.5rem 0;
+	}
+	&__line {
+		border-bottom: 1px solid #434769;
+	}
+	&__copyright {
+		padding: 5rem 0 8rem;
+		color: #565b87;
+		font-size: 1.6rem;
+		font-weight: 400;
+	}
+}
+.orange {
+	color: $orange;
+}
+.lightblue {
+	color: $lightblue;
+
+}
+
+/*
+	Responsive
+*/
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-down(md) {
+	.footer{
+		&__wrapper {
+			padding: 5rem 0;
+		}
+
+		&__copyright {
+			padding: 3rem 0 5rem;
+		}
+	}
+}
+
+// Small devices (landscape phones, less than 768px)
+@include media-breakpoint-down(sm) {
+	.footer{
+		&__wrapper {
+			padding: 3rem 0;
+		}
+
+		&__copyright {
+			padding: 1.5rem 0;
+			font-size: 1.4rem;
+		}
+	}
+}
+// Extra small devices (portrait phones, less than 576px)
+@include media-breakpoint-down(xs) {
+	.footer {
+		&__wrapper {
+			padding: 2rem 0;
+		}
+		&__copyright {
+			font-size: 1.2rem;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

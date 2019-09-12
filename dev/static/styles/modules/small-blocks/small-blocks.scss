@@ -1,0 +1,39 @@
+.sections-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  &__title {
+      font-size: 3.6rem;
+      color: $lightblue;
+      font-weight: 700;
+      text-transform: uppercase;
+  }
+  &__subtitle {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $gray;
+  }
+}
+
+/*
+  Responsive
+*/
+
+// Small devices (landscape phones, less than 768px)
+@include media-breakpoint-down(sm) {
+  .sections-header {
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@include media-breakpoint-down(xs) {
+  .sections-header {
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
+}

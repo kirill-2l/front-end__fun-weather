@@ -1,0 +1,6 @@
+.DS_store
+.idea
+build
+node_modules
+/*.exe.stackdump
+.csscomb.json
