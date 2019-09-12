@@ -1,6 +1,6 @@
 .DS_store
 .idea
-build
+dev
 node_modules
 /*.exe.stackdump
 .csscomb.json
