@@ -8,7 +8,7 @@ let uglify = require('gulp-uglify'),
 
 module.exports = function () {
     $.gulp.task('libsJS:dev', () => {
-				return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js',
+				return $.gulp.src([
 				'node_modules/jquery/dist/jquery.min.js',
 				'node_modules/bootstrap/dist/js/bootstrap.min.js',
 				'node_modules/slick-carousel/slick/slick.min.js',
@@ -19,11 +19,12 @@ module.exports = function () {
     });
 
     $.gulp.task('libsJS:build', () => {
-				return $.gulp.src(['node_modules/svg4everybody/dist/svg4everybody.min.js',
+				return $.gulp.src([
 				'node_modules/jquery/dist/jquery.min.js',
+				'node_modules/bootstrap/dist/js/bootstrap.min.js',
 				'node_modules/slick-carousel/slick/slick.min.js',
 				'node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-			])
+		])
 						.pipe(concat('libs.min.js'))
             .pipe(uglify())
             .pipe($.gulp.dest(scriptsPATH.output));
